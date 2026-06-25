@@ -1,3 +1,0 @@
-INDEX VERSION 1.134
-C:\Users\garge\OneDrive\Desktop\ojpms\.metadata\.plugins\org.eclipse.jst.jsp.core\jspsearch\1334343009.index
-\ojpms\src\main\java
