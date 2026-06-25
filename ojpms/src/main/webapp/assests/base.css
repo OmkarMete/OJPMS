@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+/* =========================
+   LIGHT THEME (DEFAULT - NO WHITE)
+========================= */
+
+:root {
+
+    /* 🌤 BRIGHT LIGHT THEME BACKGROUND (NO WHITE) */
+    --bg: linear-gradient(135deg,
+        #ffb3d9,   /* stronger pink */
+        #b3e5ff,   /* brighter sky blue */
+        #c7b3ff    /* soft purple pop */
+    );
+
+    --surface: rgba(255, 255, 255, 0.6);
+    --card: rgba(255, 255, 255, 0.7);
+    --border: rgba(0, 0, 0, 0.08);
+
+    --primary: #6366f1;
+    --primary-hover: #4f46e5;
+
+    --text: #1f2937;
+    --muted: #374151;
+}
+
+/* =========================
+   DARK THEME (TOGGLE)
+========================= */
+
+body.dark-theme {
+
+    --bg: #02040a;
+    --surface: #0b0f1a;
+    --card: #0b0f1a;
+    --border: #1f2937;
+
+    --primary: #818cf8;
+    --primary-hover: #6366f1;
+
+    --text: #e5e7eb;
+    --muted: #9ca3af;
+}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    transition: all 0.4s ease;
+}
+
+/* =========================
+   LAYOUT
+========================= */
+
+.container {
+    width: 92%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+section {
+    padding: 40px 0;
+}
+
+.grid {
+    display: grid;
+    gap: 20px;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text);
+    font-weight: 700;
+}
+
+p {
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+/* =========================
+   INPUTS
+========================= */
+
+input, select, textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border-radius: 14px;
+
+    border: 1px solid var(--border);
+    background: var(--surface);
+    color: var(--text);
+
+    outline: none;
+    transition: 0.3s ease;
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #64748b;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15);
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+    display: inline-block;
+    padding: 14px 26px;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, var(--primary), var(--primary-hover));
+    color: white;
+
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(99, 102, 241, 0.25);
+}
+
+/* =========================
+   CARDS
+========================= */
+
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    padding: 25px;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* =========================
+   GLASS EFFECT
+========================= */
+
+.glass-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    backdrop-filter: blur(15px);
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* =========================
+   STATUS
+========================= */
+
+.success {
+    color: #22c55e;
+}
+
+.error {
+    color: #ef4444;
+}
+
+/* =========================
+   RESPONSIVE HELPERS
+========================= */
+
+section {
+    background: transparent;
+}

@@ -1,0 +1,19 @@
+package com.jsp.ojpms.controller;
+
+import javax.servlet.annotation.WebServlet;
+
+import com.jsp.ojpms.dao.JobDao;
+
+
+@WebServlet(value="/deletejob")
+public class DeleteJobController {
+	
+	private void doget() {
+		
+		JobDao.getJobById(id)
+		
+		
+
+	}
+
+}

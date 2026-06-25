@@ -1,0 +1,338 @@
+/* =========================================
+   RECRUITER DASHBOARD
+========================================= */
+
+.dashboard{
+    max-width:1300px;
+    margin:40px auto;
+    padding:0 20px;
+}
+
+/* =========================================
+   COMMON CARD STYLE
+========================================= */
+
+.welcome-section,
+.card,
+.quick-actions,
+.recent-jobs,
+.applications,
+.notifications,
+.tips{
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(20px);
+
+    border-radius:24px;
+
+    transition:.35s;
+
+    box-shadow:0 10px 25px rgba(255,43,214,.08);
+}
+
+/* =========================================
+   WELCOME SECTION
+========================================= */
+
+.welcome-section{
+
+    padding:35px;
+
+    margin-bottom:30px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.welcome-section::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:5px;
+
+    background:linear-gradient(
+        90deg,
+        #ff1493,
+        #ff2bd6,
+        #ff66cc
+    );
+}
+
+.welcome-section h1{
+
+    font-size:36px;
+
+    margin-bottom:10px;
+
+    color:#ffffff;
+}
+
+.welcome-section h2{
+
+    color:#ff66cc;
+
+    margin-bottom:10px;
+}
+
+.welcome-section p{
+
+    color:#ffd6f3;
+}
+
+/* =========================================
+   STATS
+========================================= */
+
+.stats-section{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:24px;
+
+    margin-bottom:35px;
+}
+
+.card{
+
+    text-align:center;
+
+    padding:30px;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #ff1493,
+        #ff2bd6,
+        #ff66cc
+    );
+}
+
+.card:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:
+    0 20px 40px rgba(255,43,214,.18);
+}
+
+.card h2{
+
+    font-size:40px;
+
+    color:#ff2bd6;
+
+    margin-bottom:8px;
+}
+
+.card p{
+
+    color:#ffd6f3;
+}
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.quick-actions{
+
+    padding:30px;
+
+    margin-bottom:30px;
+}
+
+.quick-actions h2{
+
+    color:#ff66cc;
+
+    margin-bottom:20px;
+}
+
+.quick-actions-links{
+
+    display:flex;
+
+    gap:15px;
+}
+
+.quick-actions-links a{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:15px;
+
+    border-radius:14px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #ff1493,
+        #ff2bd6,
+        #ff66cc
+    );
+
+    transition:.3s;
+}
+
+.quick-actions-links a:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 12px 25px rgba(255,43,214,.30);
+}
+
+/* =========================================
+   CONTENT BOXES
+========================================= */
+
+.recent-jobs,
+.applications,
+.notifications,
+.tips{
+
+    padding:25px;
+
+    margin-bottom:25px;
+}
+
+.recent-jobs:hover,
+.applications:hover,
+.notifications:hover,
+.tips:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:
+    0 15px 35px rgba(255,43,214,.15);
+}
+
+.recent-jobs h2,
+.applications h2,
+.notifications h2,
+.tips h2{
+
+    color:#ff66cc;
+
+    margin-bottom:15px;
+}
+
+/* =========================================
+   LISTS
+========================================= */
+
+ul{
+
+    list-style:none;
+
+    padding:0;
+}
+
+ul li{
+
+    padding:12px 0;
+
+    color:#ffd6f3;
+
+    border-bottom:
+    1px solid rgba(255,255,255,0.08);
+}
+
+ul li:last-child{
+
+    border-bottom:none;
+}
+
+/* =========================================
+   LIGHT THEME FIX
+========================================= */
+
+body:not(.dark-theme) .welcome-section h1{
+    color:#d1007a;
+}
+
+body:not(.dark-theme) .welcome-section p,
+body:not(.dark-theme) .card p,
+body:not(.dark-theme) ul li{
+    color:#5c2347;
+}
+
+body:not(.dark-theme) .welcome-section h2,
+body:not(.dark-theme) .quick-actions h2,
+body:not(.dark-theme) .recent-jobs h2,
+body:not(.dark-theme) .applications h2,
+body:not(.dark-theme) .notifications h2,
+body:not(.dark-theme) .tips h2{
+    color:#d1007a;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+    .stats-section{
+        grid-template-columns:repeat(2,1fr);
+    }
+}
+
+@media(max-width:900px){
+
+    .quick-actions-links{
+        flex-wrap:wrap;
+    }
+
+    .quick-actions-links a{
+        min-width:220px;
+    }
+}
+
+@media(max-width:700px){
+
+    .stats-section{
+        grid-template-columns:1fr;
+    }
+
+    .quick-actions-links{
+        flex-direction:column;
+    }
+
+    .welcome-section h1{
+        font-size:28px;
+    }
+}

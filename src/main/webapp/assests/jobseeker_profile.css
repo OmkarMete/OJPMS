@@ -1,0 +1,323 @@
+.profile-container{
+    max-width:1400px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:320px 1fr;
+    gap:30px;
+    padding:0 20px;
+}
+
+/* =========================
+   SIDEBAR
+========================= */
+
+.profile-sidebar{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(25px);
+    border-radius:28px;
+    padding:30px;
+    height:fit-content;
+    text-align:center;
+    box-shadow:0 8px 32px rgba(0,0,0,.20);
+}
+
+.avatar{
+    width:110px;
+    height:110px;
+    margin:auto;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:42px;
+    font-weight:700;
+    color:white;
+    background:linear-gradient(135deg,#ff2bd6,#ff66cc);
+    margin-bottom:20px;
+}
+
+.profile-sidebar h2{
+    margin-bottom:10px;
+}
+
+.headline{
+    line-height:1.6;
+    margin-bottom:25px;
+}
+
+.contact-info{
+    text-align:left;
+    margin-top:25px;
+}
+
+.contact-info p{
+    margin:12px 0;
+}
+
+/* =========================
+   COMPLETION
+========================= */
+
+.completion-section{
+    margin-top:30px;
+}
+
+.completion-section h4{
+    margin-bottom:15px;
+}
+
+.progress-bar{
+    height:12px;
+    border-radius:30px;
+    background:rgba(255,255,255,.08);
+    overflow:hidden;
+}
+
+.progress{
+    height:100%;
+    background:linear-gradient(90deg,#ff2bd6,#ff66cc);
+}
+
+.completion-section p{
+    margin-top:10px;
+}
+
+/* =========================
+   ACTIONS
+========================= */
+
+.profile-actions{
+    margin-top:25px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.profile-actions button,
+.profile-actions a{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:15px;
+    text-decoration:none;
+    font-weight:600;
+    cursor:pointer;
+    color:white;
+    background:linear-gradient(135deg,#ff2bd6,#ff66cc);
+    transition:.3s;
+}
+
+.profile-actions button:hover,
+.profile-actions a:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.profile-content{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+/* =========================
+   SECTION CARD
+========================= */
+
+.section{
+    background:rgba(255,255,255,0.06);
+    border:1px solid rgba(255,255,255,0.12);
+    backdrop-filter:blur(25px);
+    border-radius:24px;
+    padding:25px;
+    box-shadow:0 8px 32px rgba(0,0,0,.15);
+}
+
+.section h3{
+    color:#ff66cc;
+    margin-bottom:20px;
+    font-size:24px;
+}
+
+.about-text{
+    font-size:15px;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skills-container{
+    display:flex;
+    flex-wrap:wrap;
+    gap:12px;
+}
+
+.skill-badge{
+    padding:10px 18px;
+    border-radius:30px;
+    color:white;
+    background:linear-gradient(135deg,#ff2bd6,#ff66cc);
+    font-size:14px;
+}
+
+/* =========================
+   EDUCATION
+========================= */
+
+.education-item p{
+    margin-bottom:12px;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.link-item{
+    display:inline-block;
+    margin-right:15px;
+    margin-top:10px;
+    padding:12px 20px;
+    border-radius:15px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#ff2bd6,#ff66cc);
+    transition:.3s;
+}
+
+.link-item:hover{
+    transform:translateY(-3px);
+}
+
+/* =========================
+   RESUME
+========================= */
+
+.resume-box{
+    text-align:center;
+}
+
+.resume-actions{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+.resume-btn{
+    padding:12px 22px;
+    border-radius:15px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#ff2bd6,#ff66cc);
+    transition:.3s;
+}
+
+.resume-btn:hover{
+    transform:translateY(-3px);
+}
+
+.delete-btn{
+    background:linear-gradient(135deg,#ff4d6d,#ff1744);
+}
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success-banner{
+    padding:18px;
+    border-radius:18px;
+    background:rgba(34,197,94,.15);
+    border:1px solid rgba(34,197,94,.25);
+    color:#86efac;
+    text-align:center;
+}
+
+/* =========================
+   BACK BUTTON
+========================= */
+
+.back-section{
+    text-align:center;
+}
+
+.back-btn{
+    display:inline-block;
+    padding:14px 25px;
+    border-radius:16px;
+    text-decoration:none;
+    color:white;
+    background:linear-gradient(135deg,#ff2bd6,#ff66cc);
+}
+
+/* =========================
+   LIGHT THEME
+========================= */
+
+body:not(.dark-theme) .profile-sidebar,
+body:not(.dark-theme) .section{
+    background:rgba(255,255,255,0.85);
+    border:1px solid rgba(0,0,0,.08);
+}
+
+body:not(.dark-theme) .profile-sidebar h2,
+body:not(.dark-theme) .headline,
+body:not(.dark-theme) .contact-info p,
+body:not(.dark-theme) .completion-section h4,
+body:not(.dark-theme) .completion-section p,
+body:not(.dark-theme) .completion-section small,
+body:not(.dark-theme) .section p,
+body:not(.dark-theme) .about-text,
+body:not(.dark-theme) .education-item p,
+body:not(.dark-theme) .resume-box h4,
+body:not(.dark-theme) .resume-box p,
+body:not(.dark-theme) b{
+    color:#111827 !important;
+}
+
+/* =========================
+   DARK THEME
+========================= */
+
+body.dark-theme .profile-sidebar h2,
+body.dark-theme .resume-box h4,
+body.dark-theme b{
+    color:#ffffff !important;
+}
+
+body.dark-theme .headline,
+body.dark-theme .contact-info p,
+body.dark-theme .completion-section h4,
+body.dark-theme .completion-section p,
+body.dark-theme .completion-section small,
+body.dark-theme .section p,
+body.dark-theme .about-text,
+body.dark-theme .education-item p,
+body.dark-theme .resume-box p{
+    color:#f9d3eb !important;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1000px){
+    .profile-container{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:768px){
+
+    .resume-actions{
+        flex-direction:column;
+    }
+
+    .profile-sidebar{
+        padding:25px;
+    }
+}

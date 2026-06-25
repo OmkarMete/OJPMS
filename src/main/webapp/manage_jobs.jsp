@@ -1,0 +1,106 @@
+<%@ page language="java"
+contentType="text/html; charset=UTF-8"
+pageEncoding="UTF-8"%>
+
+<%@ page isELIgnored="false"%>
+
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"
+prefix="c"%>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Manage Jobs</title>
+
+<link rel="stylesheet" href="assests/base.css">
+<link rel="stylesheet" href="assests/manage_job.css">
+<link rel="stylesheet" href="assests/home.css">
+
+</head>
+
+<body>
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+    <h2>RecruitEase</h2>
+
+    <a href="home.jsp">🏠 Home</a>
+    <a href="viewjob">💼 Jobs</a>
+    <a href="register.jsp">📝 Register</a>
+    <a href="login.jsp">🔑 Login</a>
+    <a href="#">📄 Applications</a>
+    <a href="#">👤 Profile</a>
+
+</div>
+
+<jsp:include page="navbar.jsp"/>
+
+<%
+	if(session.getAttribute("user")==null)
+		response.sendRedirect("login.jsp");
+%>
+
+<div class="jobs-page">
+
+	<h1>Manage Jobs</h1>
+
+	<p>
+		View all jobs posted by you.
+	</p>
+
+	<c:if test="${empty jobs}">
+		<h3>No jobs posted yet.</h3>
+	</c:if>
+
+	<div class="jobs-container">
+
+		<c:forEach var="job"
+				   items="${jobs}">
+
+			<div class="job-card">
+
+				<h2>
+					${job.title}
+				</h2>
+
+				<p>
+					<b>Description:</b>
+					${job.description}
+				</p>
+
+				<p>
+					📍<b>Location:</b>
+					${job.location}
+				</p>
+
+				<p>
+					<b>Salary:</b>
+					₹${job.salary}
+				</p>
+
+				<span class="status">
+    				● Active
+				</span>
+
+				<a href="editjob?id=${job.id}" class="apply-btn">
+					✏️ Edit Job
+				</a>
+				
+				<a href="deletejob?id=${job.id}" class="apply-btn">
+					✏️ Delete
+				</a>
+			</div>
+
+		</c:forEach>
+
+	</div>
+
+</div>
+
+</body>
+</html>

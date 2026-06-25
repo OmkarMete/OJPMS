@@ -1,0 +1,363 @@
+/* ======================================
+   RESET PASSWORD PAGE
+====================================== */
+
+.form-container{
+
+    width:500px;
+
+    margin:60px auto;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    backdrop-filter:blur(25px);
+
+    box-shadow:
+    0 15px 40px rgba(255,43,214,.15);
+
+    animation:fadeUp .6s ease;
+}
+
+/* ======================================
+   HEADER
+====================================== */
+
+.form-container h1{
+
+    text-align:center;
+
+    font-size:38px;
+
+    margin-bottom:10px;
+
+    background:linear-gradient(
+        135deg,
+        #ff1493,
+        #ff2bd6,
+        #ff66cc
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+}
+
+.form-subtitle{
+
+    text-align:center;
+
+    margin-bottom:25px;
+
+    line-height:1.6;
+}
+
+/* ======================================
+   FORM
+====================================== */
+
+.form-container form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+}
+
+.form-container label{
+
+    font-weight:600;
+}
+
+/* ======================================
+   INPUTS
+====================================== */
+
+.form-container input{
+
+    width:100%;
+
+    padding:15px 18px;
+
+    border-radius:16px;
+
+    border:1px solid rgba(255,255,255,0.12);
+
+    background:rgba(255,255,255,0.08);
+
+    font-size:15px;
+
+    transition:.3s;
+}
+
+.form-container input:focus{
+
+    outline:none;
+
+    border-color:#ff2bd6;
+
+    box-shadow:
+    0 0 15px rgba(255,43,214,.25);
+}
+
+small{
+
+    display:block;
+
+    margin-top:8px;
+
+    font-size:12px;
+}
+
+/* ======================================
+   BUTTON
+====================================== */
+
+.form-container input[type="submit"]{
+
+    margin-top:15px;
+
+    border:none;
+
+    cursor:pointer;
+
+    height:58px;
+
+    font-weight:600;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #ff1493,
+        #ff2bd6,
+        #ff66cc
+    );
+
+    transition:.3s;
+}
+
+.form-container input[type="submit"]:hover{
+
+    transform:translateY(-3px);
+
+    box-shadow:
+    0 10px 25px rgba(255,43,214,.35);
+}
+
+/* ======================================
+   LINKS
+====================================== */
+
+.form-links{
+
+    display:flex;
+
+    gap:12px;
+
+    margin-top:25px;
+}
+
+.form-links .btn{
+
+    flex:1;
+
+    text-align:center;
+
+    padding:14px;
+
+    border-radius:16px;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+    transition:.3s;
+
+    background:linear-gradient(
+        135deg,
+        #ff1493,
+        #ff2bd6,
+        #ff66cc
+    );
+
+    color:white;
+}
+
+.form-links .btn:hover{
+
+    transform:translateY(-3px);
+}
+
+.register-btn{
+
+    background:linear-gradient(
+        135deg,
+        #ff1493,
+        #ff2bd6,
+        #ff66cc
+    ) !important;
+}
+
+/* ======================================
+   MESSAGES
+====================================== */
+
+.success{
+
+    text-align:center;
+
+    margin-top:15px;
+
+    color:#22c55e;
+
+    font-weight:600;
+}
+
+.error{
+
+    text-align:center;
+
+    margin-top:15px;
+
+    color:#ff6b81;
+
+    font-weight:600;
+}
+
+/* ======================================
+   SECURITY NOTE
+====================================== */
+
+.security-note{
+
+    margin-top:25px;
+
+    padding:20px;
+
+    border-radius:20px;
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.12);
+}
+
+.security-note h3{
+
+    color:#ff66cc;
+
+    margin-bottom:10px;
+}
+
+.security-note p{
+
+    line-height:1.7;
+}
+
+/* ======================================
+   DARK THEME
+====================================== */
+
+body.dark-theme .form-subtitle,
+body.dark-theme label,
+body.dark-theme small,
+body.dark-theme .security-note p{
+
+    color:#ffd6f3;
+}
+
+body.dark-theme input{
+
+    color:white;
+}
+
+body.dark-theme input::placeholder{
+
+    color:#ffb3ec;
+}
+
+/* ======================================
+   LIGHT THEME
+====================================== */
+
+body:not(.dark-theme) .form-container{
+
+    background:rgba(255,255,255,.92);
+
+    border:1px solid #e5e7eb;
+}
+
+body:not(.dark-theme) .form-subtitle,
+body:not(.dark-theme) label,
+body:not(.dark-theme) small,
+body:not(.dark-theme) .security-note p{
+
+    color:#111827;
+}
+
+body:not(.dark-theme) input{
+
+    background:#ffffff;
+
+    border:1px solid #d1d5db;
+
+    color:#111827;
+}
+
+body:not(.dark-theme) input::placeholder{
+
+    color:#6b7280;
+}
+
+body:not(.dark-theme) .security-note{
+
+    background:#f9fafb;
+
+    border:1px solid #e5e7eb;
+}
+
+/* ======================================
+   ANIMATION
+====================================== */
+
+@keyframes fadeUp{
+
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* ======================================
+   MOBILE
+====================================== */
+
+@media(max-width:600px){
+
+    .form-container{
+
+        width:92%;
+
+        padding:25px;
+    }
+
+    .form-links{
+
+        flex-direction:column;
+    }
+
+    .form-container h1{
+
+        font-size:30px;
+    }
+}
